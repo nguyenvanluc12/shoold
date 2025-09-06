@@ -4,106 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sơ Đồ Lớp Học</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            background-color: #f0f0f0;
-        }
-        .class-diagram {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .title {
-            text-align: center;
-            color: #2c3e50;
-        }
-        .school-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .school-logo img {
-            width: 100px;
-            height: auto;
-        }
-        .top-section {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .entrance, .teacher-desk {
-            background-color: #3498db;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            width: 100px;
-            text-align: center;
-        }
-        .diagram-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .left-side, .right-side {
-            width: 45%;
-        }
-        .center-spacer {
-            width: 10%;
-        }
-        .row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .desk {
-            background-color: #ecf0f1;
-            border: 1px solid #bdc3c7;
-            border-radius: 5px;
-            padding: 10px;
-            width: 45%;
-            text-align: center;
-            min-height: 60px;
-        }
-        .student {
-            margin: 5px;
-            padding: 5px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .student.female {
-            background-color: #ffebee;
-        }
-        .student.male {
-            background-color: #e3f2fd;
-        }
-        .student.selected {
-            background-color: #f1c40f;
-            font-weight: bold;
-        }
-        .student-name {
-            font-size: 14px;
-        }
-        .swap-button {
-            display: none;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #2ecc71;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            font-size: 16px;
-        }
-        .swap-button.show {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="class-diagram">
@@ -113,6 +14,10 @@
             <div class="school-logo">
                 <img src="https://r73troypb4obj.vcdn.cloud/website02/uploads/pictures/62928dd61a1b855737a80f87/content_danh-gia-truong-thpt-phan-thuc-truc-nghe-an-co-tot-khong-1.jpg" alt="School Logo">
                 <p>TRƯỜNG THPT PHAN THÚC TRỰC</p>
+            </div>
+            <div class="teacher-info">
+                <p><strong>GVCN:</strong> Trần Thị Vân</p>
+                <p><strong>SĐT:</strong> 0976025819</p>
             </div>
         </div>
 
@@ -125,242 +30,105 @@
             </div>
         </div>
 
-        <button id="swapButton" class="swap-button">Đổi chỗ</button>
-
         <div class="diagram-container">
+            <!-- BÊN TRÁI -->
             <div class="left-side">
                 <div class="row">
+                    <div class="desk"><div class="student male"><span class="student-name">Văn Phi</span></div></div>
                     <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Hoài Giang</span>
-                        </div>
-                    </div>
-                    <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Thị Bình</span>
-                        </div>
-                        <div class="student female">
-                            <span class="student-name">Khánh Linh</span>
-                        </div>
+                        <div class="student female"><span class="student-name">Thị Bình</span></div>
+                        <div class="student male"><span class="student-name">Quang Bảo</span></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Thanh Trúc</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">Văn Phi</span>
-                        </div>
+                        <div class="student male"><span class="student-name">Minh Đức</span></div>
+                        <div class="student female"><span class="student-name">Hoài Giang</span></div>
+                    </div>
+                    <div class="desk"><div class="student male"><span class="student-name">Đinh Đại</span></div></div>
+                </div>
+                <div class="row">
+                    <div class="desk">
+                        <div class="student male"><span class="student-name">Xuân Vinh</span></div>
+                        <div class="student female"><span class="student-name">Thị Xuân</span></div>
                     </div>
                     <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Nhân Toàn</span>
-                        </div>
+                        <div class="student female"><span class="student-name">Trúc Ly</span></div>
+                        <div class="student male"><span class="student-name">Kim Bảo</span></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Huyền Ly</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">Kim Bảo</span>
-                        </div>
+                        <div class="student female"><span class="student-name">Bảo Ngọc</span></div>
+                        <div class="student male"><span class="student-name">xuân khởi</span></div>
                     </div>
+                    
+                    <div class="desk"><div class="student female"><span class="student-name">Khánh Ngọc</span></div></div>
+                </div>
+                <div class="row">
+                    <div class="desk"><div class="student female"><span class="student-name">Hồng Nhung</span></div></div>
                     <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Xuân Vinh</span>
-                        </div>
-                        <div class="student female">
-                            <span class="student-name">Thị Xuân</span>
-                        </div>
+                        <div class="student female"><span class="student-name">Thị Đức</span></div>
+                        <div class="student male"><span class="student-name">Công Việt</span></div>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="desk"><div class="student male"><span class="student-name">Công Dương</span></div></div>
                     <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Văn Quang</span>
-                        </div>
-                    </div>
-                    <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Khánh Ngọc</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Hồng Nhung</span>
-                        </div>
-                    </div>
-                    <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Bá Nhân</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">Minh Đức</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Công Dương</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">xuân khởi</span>
-                        </div>
-                    </div>
-                    <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Công Việt</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">Hồng Hùng</span>
-                        </div>
+                        <div class="student female"><span class="student-name">Thanh Trúc</span></div>
+                        <div class="student male"><span class="student-name">Hồng Hùng</span></div>
                     </div>
                 </div>
             </div>
 
             <div class="center-spacer"></div>
 
+            <!-- BÊN PHẢI -->
             <div class="right-side">
                 <div class="row">
                     <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Bảo Ngọc</span>
-                        </div>
-                        <div class="student female">
-                            <span class="student-name">Thị Trung</span>
-                        </div>
+                        <div class="student male"><span class="student-name">Nhân Toàn</span></div>
+                        <div class="student female"><span class="student-name">Thị Trung</span></div>
                     </div>
                     <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Trúc Ly</span>
-                        </div>
-                        <div class="student female">
-                            <span class="student-name">Kiều Trang</span>
-                        </div>
+                        <div class="student male"><span class="student-name">Tuấn Kiệt</span></div>
+                        <div class="student female"><span class="student-name">Kiều Trang</span></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Văn Lục</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">Tuấn Kiệt</span>
-                        </div>
+                        <div class="student male"><span class="student-name">Văn Lục</span></div>
+                        <div class="student male"><span class="student-name">Văn Quang</span></div>
                     </div>
+                    <div class="desk"><div class="student female"><span class="student-name">Ngọc Ánh</span></div></div>
+                </div>
+                <div class="row">
+                    <div class="desk"><div class="student male"><span class="student-name">Đức Huy</span></div></div>
                     <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Ngọc Ánh</span>
-                        </div>
+                        <div class="student male"><span class="student-name">Anh Tuấn</span></div>
+                        <div class="student female"><span class="student-name">Khánh Linh</span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="desk"><div class="student female"><span class="student-name">Huyền Ly</span></div></div>
+                    <div class="desk">
+                        <div class="student male"><span class="student-name">Nhật Nam</span></div>
+                        <div class="student male"><span class="student-name">Công Tuấn</span></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Đức Huy</span>
-                        </div>
+                        <div class="student female"><span class="student-name">Thị Hiền</span></div>
+                        <div class="student male"><span class="student-name">Bá Nhân</span></div>
                     </div>
-                    <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Anh Tuấn</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">Quang Bảo</span>
-                        </div>
-                    </div>
+                    <div class="desk"><div class="student male"><span class="student-name">Quang Minh</span></div></div>
                 </div>
                 <div class="row">
-                    <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Công Tuấn</span>
-                        </div>
-                    </div>
-                    <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Nhật Nam</span>
-                        </div>
-                        <div class="student male">
-                            <span class="student-name">Đình Đại</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Thị Hiền</span>
-                        </div>
-                        <div class="student female">
-                            <span class="student-name">Thị Đức</span>
-                        </div>
-                    </div>
-                    <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Quang Minh</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="desk">
-                        <div class="student female">
-                            <span class="student-name">Mai Huyền</span>
-                        </div>
-                    </div>
-                    <div class="desk">
-                        <div class="student male">
-                            <span class="student-name">Nhật Quang</span>
-                        </div>
-                    </div>
+                    <div class="desk"><div class="student female"><span class="student-name">Mai Huyền</span></div></div>
+                    <div class="desk"><div class="student male"><span class="student-name">Nhật Quang</span></div></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        let selectedStudents = [];
-
-        document.querySelectorAll('.student').forEach(student => {
-            student.addEventListener('click', () => {
-                if (selectedStudents.includes(student)) {
-                    student.classList.remove('selected');
-                    selectedStudents = selectedStudents.filter(s => s !== student);
-                } else if (selectedStudents.length < 2) {
-                    student.classList.add('selected');
-                    selectedStudents.push(student);
-                }
-
-                const swapButton = document.getElementById('swapButton');
-                if (selectedStudents.length === 2) {
-                    swapButton.classList.add('show');
-                } else {
-                    swapButton.classList.remove('show');
-                }
-            });
-        });
-
-        document.getElementById('swapButton').addEventListener('click', () => {
-            if (selectedStudents.length === 2) {
-                const [student1, student2] = selectedStudents;
-                const name1 = student1.querySelector('.student-name').textContent;
-                const name2 = student2.querySelector('.student-name').textContent;
-                const class1 = student1.className;
-                const class2 = student2.className;
-
-                student1.querySelector('.student-name').textContent = name2;
-                student2.querySelector('.student-name').textContent = name1;
-                student1.className = class2;
-                student2.className = class1;
-
-                selectedStudents.forEach(student => student.classList.remove('selected'));
-                selectedStudents = [];
-                document.getElementById('swapButton').classList.remove('show');
-            }
-        });
-    </script>
 </body>
 </html>
